@@ -1,10 +1,10 @@
 <?php
 /*define
 *
- * S = bích
- * H = cơ
- * D = rô
- * C = chuồn
+ * S = Spades
+ * H = Hearts
+ * D = Diamonds
+ * C = Clovers
 */
 /*array data*/
 $A = [
@@ -283,13 +283,13 @@ $A = [
 ];
 /*Class*/
 class Check{
-    public $output           = 'Not thing';
+    public $output           = '--';
 
-    const four_cards   = '4C'; // tu quy
-    const full_house   = 'FH'; // 1 doi + 3 la
-    const three_cards  = '3C'; // 3 la
-    const two_pairs    = '2P'; //2 doi
-    const one_pair     = '1P'; //1 doi
+    const four_cards   = '4C'; 
+    const full_house   = 'FH'; 
+    const three_cards  = '3C';
+    const two_pairs    = '2P'; 
+    const one_pair     = '1P'; 
 
     public function checkCase($arr){
         $return['string'] = '';
@@ -388,9 +388,9 @@ class Check{
  * Begin
  */
 
-$chia_bai   = array_random_assoc($A,5);
+$select_cards   = array_random_assoc($A,5);
 $ch         = new Check();
-$return     = $ch->checkCase($chia_bai);
+$return     = $ch->checkCase($select_cards);
 echo $return['string']." => ".$return['output'];
 
 /*function*/

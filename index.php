@@ -335,7 +335,7 @@ class Check{
                             break;
                         }
                     }
-                    if($this->output == 'Not thing') {
+                    if($this->output == '--') {
                         if ($flash_key == 1) {
                             $this->output = self::one_pair;
                             break;
